@@ -1,0 +1,220 @@
+/* PAGE D'ACCUEIL :*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #332a33;
+    font-family: "Arial Narrow", Impact, sans-serif;
+    color: white;
+}
+
+/* Menu du haut */
+header {
+    height: 42px;
+    background-color: #332a33;
+}
+
+.barre-menu {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.barre-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.texte-recherche {
+    color: white;
+    font-size: inherit;
+}
+
+/* Les trois grandes photos */
+.galerie {
+    display: flex;
+    height: calc(100vh - 96px);
+    min-height: 400px;
+}
+
+.personne {
+    position: relative;
+    width: 33.333%;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.personne img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.personne:hover img {
+    filter: brightness(70%);
+}
+
+.personne h1,
+.personne h2 {
+    position: absolute;
+    top: 7%;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    font-family: Impact, "Arial Narrow", sans-serif;
+    font-weight: normal;
+    line-height: 1.1;
+    color: #d5d1d0;
+}
+
+.messi h1 {
+    top: 12%;
+    font-size: clamp(45px, 8vw, 125px);
+}
+
+.michael h2 {
+    top: 8%;
+    font-size: clamp(34px, 5.3vw, 78px);
+}
+
+.curry h2 {
+    top: 10%;
+    font-size: clamp(28px, 4vw, 62px);
+    line-height: 1.5;
+}
+
+/* Pied de page */
+footer {
+    height: 54px;
+    background-color: #332a33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+/* Affichage sur telephone */
+@media (max-width: 600px) {
+    .barre-menu {
+        font-size: 19px;
+    }
+
+    .galerie {
+        height: auto;
+        min-height: 0;
+        flex-direction: column;
+    }
+
+    .personne {
+        width: 100%;
+        height: 65vh;
+        min-height: 300px;
+    }
+
+    .personne h1 {
+        font-size: 70px;
+    }
+
+    .personne h2 {
+        font-size: 55px;
+    }
+}
+
+/* ==========================================================
+   PAGES MESSI
+   ========================================================== */
+body.messi-page {
+    min-height: 100vh;
+    background: #171319;
+    color: #f7f4f6;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.65;
+}
+.messi-page a { color: inherit; }
+.messi-page .conteneur { max-width: 1080px; margin: auto; padding: 0 22px; }
+.messi-page header { height: auto; }
+.messi-page .messi-entete {
+    min-height: 76px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 30px;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.messi-page .marque { text-decoration: none; font-weight: 800; font-size: 22px; }
+.messi-page nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 4px 8px; padding: 0; margin: 0; }
+.messi-page nav a {
+    display: inline-block;
+    padding: 6px 9px;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.messi-page nav a:hover, .messi-page nav a:focus-visible, .messi-page nav .actif {
+    background: #544657;
+}
+.messi-page main { min-height: 66vh; }
+.messi-page h1, .messi-page h2, .messi-page h3 { line-height: 1.22; }
+.messi-page h1 { font-size: clamp(36px, 5vw, 58px); margin: 0 0 15px; }
+.messi-page h2 { font-size: 28px; margin-top: 0; }
+.messi-page h3 { font-size: 20px; margin-top: 0; }
+.messi-page .banniere {
+    padding: 60px 0;
+    background: linear-gradient(90deg, #1a111bd9, #241c2673), url('assets/messi.jpg') center 38% / cover;
+}
+.messi-page .banniere p { font-size: 18px; max-width: 600px; }
+.messi-page .bouton {
+    display: inline-block;
+    background: #efe7ef;
+    color: #211a23;
+    text-decoration: none;
+    padding: 10px 19px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.messi-page .bouton:hover { background: white; }
+.messi-page .intro { padding: 55px 0 25px; }
+.messi-page .intro p { max-width: 730px; }
+.messi-page .section { padding: 30px 0 55px; }
+.messi-page .grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 18px;
+}
+.messi-page .carte {
+    background: #2b2330;
+    padding: 22px;
+    border-radius: 8px;
+    border: 1px solid #4b3b4e;
+}
+.messi-page .carte p:last-child { margin-bottom: 0; }
+.messi-page .carte a { text-underline-offset: 3px; }
+.messi-page footer { height: auto; padding: 30px 0; }
+.messi-page footer p { font: inherit; font-size: 15px; margin-top: 18px; text-align: center; }
+.messi-page .pied-navigation ul { justify-content: center; }
+.messi-page .titre-page { background: #231c26; padding: 50px 0 30px; }
+@media (max-width: 600px) {
+    .messi-page .messi-entete { display: block; }
+    .messi-page .messi-entete nav { margin-top: 14px; }
+    .messi-page .tableau th, .messi-page .tableau td { padding: 8px; font-size: 14px; }
+}
+
+.messi-page .infos-messi { margin-top: 25px; }
+.messi-page .date-info { color: #ead3ee; font-size: 14px; font-weight: bold; }
+.messi-page .source-info { font-size: 14px; }
