@@ -1,0 +1,157 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: radial-gradient(circle at top, #000000 20%, #1a1a1a 80%);
+    color: #f2f2f2;
+    padding: 40px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: #0d0d0d;
+    color: #e6e6e6;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 
+        0 0 25px rgba(255,0,0,0.4),
+        0 0 60px rgba(255,255,255,0.15);
+    border: 2px solid #b30000;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+h1 {
+    font-size: ;-3.2rem
+    text-align: center;
+    margin-bottom: 25px;
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 
+        0 0 10px #ff0000,
+        0 0 20px #ffffff;
+}
+
+h2 {
+    font-size: 1.7rem;
+    margin-top: 35px;
+    margin-bottom: 12px;
+    color: #ff1a1a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-left: 6px solid #ffffff;
+    padding-left: 12px;
+    font-weight: 600;
+}
+p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 18px;
+    color: #e6e6e6;
+}
+a {
+    color: #ff1a1a;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+strong {
+    color: #ffffff;
+    text-shadow: 
+        0 0 5px #ffffff,
+        0 0 10px #cccccc,
+        0 0 15px #ff0000;
+}
+
+/*  css style*/
+article a {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+a {
+  color: #f5c77e;
+  text-underline-offset: 4px;
+}
+
+a:focus-visible {
+  outline: 2px solid #f5c77e;
+  outline-offset: 4px;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #5c4835;
+}
+
+
+/* css style2 */
+
+#reseaux-sociaux .bouton-instagram {
+    display: inline-block;
+    padding: 12px 20px;
+    background: linear-gradient(45deg, #96226f, #7214a3);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#reseaux-sociaux .bouton-instagram:hover,
+#reseaux-sociaux .bouton-instagram:focus-visible {
+    background: #501074;
+    color: white;
+}
+/* css style3 */
+
+#albums {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 20px;
+}
+
+#albums h2 {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+}
+
+.title {
+  margin: 0;
+  color: #f5c77e;
+  font-family: Georgia, serif;
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  line-height: 1.1;
+}
+
+.reseaux-sociaux{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* Mobile : 1 album par ligne */
+@media (max-width: 600px) {
+    #albums ul {
+        grid-template-columns: 1fr;
+        /* mobile : 1 album par ligne */
+    }
+        }
